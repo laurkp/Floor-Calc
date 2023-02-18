@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33403.182
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Floor Calc", "Floor Calc\Floor Calc.csproj", "{061A6C55-61A9-4C1F-8794-DC62D3F33F4D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CA5B9B5E-66A3-440E-985D-606C46731CDE}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{061A6C55-61A9-4C1F-8794-DC62D3F33F4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{061A6C55-61A9-4C1F-8794-DC62D3F33F4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{061A6C55-61A9-4C1F-8794-DC62D3F33F4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{061A6C55-61A9-4C1F-8794-DC62D3F33F4D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {184C7360-C65A-48D3-B4F1-422B6154C370}
+	EndGlobalSection
+EndGlobal
