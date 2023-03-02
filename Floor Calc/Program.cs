@@ -60,6 +60,8 @@
 
             // Calculating floor area for the square room
             int squareFloorArea = floorSide * floorSide;
+            
+            Console.WriteLine("Flooring area for the square room is: " + squareFloorArea);
 
             //Calculating how much flooring we need for the room
             int flooringNeeded = squareFloorArea / tileArea;
