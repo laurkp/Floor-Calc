@@ -8,25 +8,25 @@
             Console.WriteLine("Insert floor width: ");
             int floorWidth = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Insert floor length: ");
-            int floorLength = int.Parse(Console.ReadLine());
+            Console.WriteLine("Insert floor lenght: ");
+            int floorLenght = int.Parse(Console.ReadLine());
 
             Console.WriteLine("Insert tile width: ");
             int tileWidth = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Insert tile length: ");
-            int tileLength = int.Parse(Console.ReadLine());
+            Console.WriteLine("Insert tile lenght: ");
+            int tileLenght = int.Parse(Console.ReadLine());
 
             Console.WriteLine("Insert price per unit of flooring: ");
             int pricePerUnit = int.Parse(Console.ReadLine());
 
             // Calculating floor area
-            int floorArea = floorWidth * floorLength;
+            int floorArea = floorWidth * floorLenght;
 
             Console.WriteLine("Floor area is: " + floorArea);
 
             //Calculating tile area
-            int tileArea = tileWidth * tileLength;
+            int tileArea = tileWidth * tileLenght;
 
             Console.WriteLine("Tile area is: " + tileArea);
       
@@ -38,8 +38,10 @@
             Console.WriteLine("Calculate the labor cost if the average flooring team can only put in 20 square feet of flooring per hour at a cost of $86.00/hr");
 
             //Declaring how much we put in an hour and the price
-            int floorTeam = 20;
-            int hourPrice = 86;
+            const int FLOOR_TEAM = 20;
+            const int HOUR_PRICE = 86;
+            int floorTeam = FLOOR_TEAM;
+            int hourPrice = HOUR_PRICE;
 
             //Calculating hours needed for the rooms 
             int hoursN = floorArea / floorTeam;
@@ -50,6 +52,19 @@
             int laborC = hoursN * hourPrice;
 
             Console.WriteLine("Total labor cost is: $" + laborC);
+
+            //Asking the floor dimensions for a non-rectangular room
+            Console.WriteLine("Calculate how much flooring will be needed for a square room");
+            Console.WriteLine("Insert floor side: ");
+            int floorSide = int.Parse(Console.ReadLine());
+
+            // Calculating floor area for the square room
+            int squareFloorArea = floorSide * floorSide;
+
+            //Calculating how much flooring we need for the room
+            int flooringNeeded = squareFloorArea / tileArea;
+
+            Console.WriteLine("Flooring needed for the square room: " + flooringNeeded);
         }
     }
 }
