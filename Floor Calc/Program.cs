@@ -9,24 +9,24 @@
             int floorWidth = int.Parse(Console.ReadLine());
 
             Console.WriteLine("Insert floor lenght: ");
-            int floorLenght = int.Parse(Console.ReadLine());
+            int floorLength = int.Parse(Console.ReadLine());
 
             Console.WriteLine("Insert tile width: ");
             int tileWidth = int.Parse(Console.ReadLine());
 
             Console.WriteLine("Insert tile lenght: ");
-            int tileLenght = int.Parse(Console.ReadLine());
+            int tileLength = int.Parse(Console.ReadLine());
 
             Console.WriteLine("Insert price per unit of flooring: ");
             int pricePerUnit = int.Parse(Console.ReadLine());
 
             // Calculating floor area
-            int floorArea = floorWidth * floorLenght;
+            int floorArea = floorWidth * floorLength;
 
             Console.WriteLine("Floor area is: " + floorArea);
 
             //Calculating tile area
-            int tileArea = tileWidth * tileLenght;
+            int tileArea = tileWidth * tileLength;
 
             Console.WriteLine("Tile area is: " + tileArea);
       
