@@ -2,6 +2,9 @@
 {
     internal class Program
     {
+        //Declaring how much we put in an hour and the price
+        const int FLOOR_TEAM = 20;
+        const int HOUR_PRICE = 86;
         static void Main(string[] args)
         {
             // Asking for floor and tile dimensions and price per unit
@@ -29,27 +32,21 @@
             int tileArea = tileWidth * tileLength;
 
             Console.WriteLine("Tile area is: " + tileArea);
-      
+
             // Calculating the total price 
             int total = floorArea / tileArea * pricePerUnit;
 
-            Console.WriteLine("Total price is: $" +total);
+            Console.WriteLine("Total price is: $" + total);
 
             Console.WriteLine("Calculate the labor cost if the average flooring team can only put in 20 square feet of flooring per hour at a cost of $86.00/hr");
 
-            //Declaring how much we put in an hour and the price
-            const int FLOOR_TEAM = 20;
-            const int HOUR_PRICE = 86;
-            int floorTeam = FLOOR_TEAM;
-            int hourPrice = HOUR_PRICE;
-
             //Calculating hours needed for the rooms 
-            int hoursN = floorArea / floorTeam;
+            int hoursN = floorArea / FLOOR_TEAM;
 
             Console.WriteLine("Total hours needed is: " + hoursN);
 
-            //Calculating total laborr cost
-            int laborC = hoursN * hourPrice;
+            //Calculating total labor cost
+            int laborC = hoursN * HOUR_PRICE;
 
             Console.WriteLine("Total labor cost is: $" + laborC);
 
@@ -60,13 +57,23 @@
 
             // Calculating floor area for the square room
             int squareFloorArea = floorSide * floorSide;
-            
+
             Console.WriteLine("Floor area for the square room is: " + squareFloorArea);
 
             //Calculating how much flooring we need for the room
             int flooringNeeded = squareFloorArea / tileArea;
 
             Console.WriteLine("Flooring needed for the square room: " + flooringNeeded);
+
+            //Calculating hours needed for the square room
+            int squareHoursN = squareFloorArea / FLOOR_TEAM;
+
+            Console.WriteLine("Total hours needed for the square room is: " + squareHoursN);
+
+            //Calculating total laborr cost for the square room
+            int squareLaborC = squareHoursN * HOUR_PRICE;
+
+            Console.WriteLine("Total labor cost for the square room is: $" + squareLaborC);
         }
     }
 }
