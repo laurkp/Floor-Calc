@@ -24,56 +24,40 @@
             double pricePerUnit = double.Parse(Console.ReadLine());
 
             // Calculating floor area
-            double floorArea = floorWidth * floorLength;
-
-            Console.WriteLine($"Floor area is: {floorArea}");
+            var floorArea = floorWidth * floorLength;
 
             //Calculating tile area
-            double tileArea = tileWidth * tileLength;
-
+            var tileArea = tileWidth * tileLength;
             Console.WriteLine($"Tile area is: {tileArea}");
 
-            // Calculating the total price 
-            double total = floorArea / tileArea * pricePerUnit;
+            //Calculating how much flooring we need for the room
+            var flooringNeeded = floorArea / tileArea;
 
-            Console.WriteLine($"Total price is: ${total}");
+            // Calculating the total price 
+            var total = floorArea / tileArea * pricePerUnit;
 
             Console.WriteLine($"Calculate the labor cost if the average flooring team can only put in {FLOOR_TEAM} square feet of flooring per hour at a cost of {HOUR_PRICE}/hr");
 
             //Calculating hours needed for the rooms 
-            double hoursN = floorArea / FLOOR_TEAM;
-
-            Console.WriteLine($"Total hours needed is: {hoursN}");
+            var hoursN = floorArea / FLOOR_TEAM;
 
             //Calculating total labor cost
-            double laborC = hoursN * HOUR_PRICE;
+            var laborC = hoursN * HOUR_PRICE;
 
-            Console.WriteLine($"Total labor cost is: ${laborC}");
-
-            //Asking the floor dimensions for a non-rectangular room
-            Console.WriteLine("Calculate how much flooring will be needed for a square room");
-            Console.WriteLine("Insert floor side: ");
-            double floorSide = double.Parse(Console.ReadLine());
-
-            // Calculating floor area for the square room
-            double squareFloorArea = floorSide * floorSide;
-
-            Console.WriteLine($"Floor area for the square room is: {squareFloorArea}");
-
-            //Calculating how much flooring we need for the room
-            double flooringNeeded = squareFloorArea / tileArea;
-
-            Console.WriteLine($"Flooring needed for the square room: {flooringNeeded}");
-
-            //Calculating hours needed for the square room
-            double squareHoursN = squareFloorArea / FLOOR_TEAM;
-
-            Console.WriteLine($"Total hours needed for the square room is: {squareHoursN}");
-
-            //Calculating total laborr cost for the square room
-            double squareLaborC = squareHoursN * HOUR_PRICE;
-
-            Console.WriteLine($"Total labor cost for the square room is: ${squareLaborC}");
+            if (floorWidth != floorLength) 
+            {
+                Console.WriteLine($"Floor area is: {floorArea}");
+                Console.WriteLine($"Total price is: ${total}");
+                Console.WriteLine($"Total hours needed is: {hoursN}");
+                Console.WriteLine($"Total labor cost is: ${laborC}");
+            } 
+            else if (floorWidth == floorLength)
+            {
+                Console.WriteLine($"Floor area for the square room is: {floorArea}");
+                Console.WriteLine($"Flooring needed for the square room: {flooringNeeded}");
+                Console.WriteLine($"Total hours needed for the square room is: {hoursN}");
+                Console.WriteLine($"Total labor cost for the square room is: ${laborC}");
+            }
         }
     }
 }
