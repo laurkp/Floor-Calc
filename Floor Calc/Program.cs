@@ -55,6 +55,7 @@
             {
                 Console.WriteLine($"Floor area for the square room is: {floorArea}");
                 Console.WriteLine($"Flooring needed for the square room: {flooringNeeded}");
+                Console.WriteLine($"Total price is: ${total}");
                 Console.WriteLine($"Total hours needed for the square room is: {hoursN}");
                 Console.WriteLine($"Total labor cost for the square room is: ${laborC}");
             }
