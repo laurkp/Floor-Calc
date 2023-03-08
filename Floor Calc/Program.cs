@@ -23,42 +23,42 @@
             Console.WriteLine("Insert price per unit of flooring: ");
             double pricePerUnit = double.Parse(Console.ReadLine());
 
-            // Calculating floor area
-            var floorArea = floorWidth * floorLength;
+            Console.WriteLine("Insert the radius of a circle shaped floor: ");
+            double floorRadius = float.Parse(Console.ReadLine());
+
+            // Calculating floor area for a rectangle room
+            double floorArea = floorWidth * floorLength;
+
+            // Calculate the floor area for a circle shaped room
+            double circleArea = Math.PI * (floorRadius * floorRadius);
 
             //Calculating tile area
-            var tileArea = tileWidth * tileLength;
-            Console.WriteLine($"Tile area is: {tileArea}");
+            double tileArea = tileWidth * tileLength;
 
-            //Calculating how much flooring we need for the room
-            var flooringNeeded = floorArea / tileArea;
+            //Calculating how much flooring we need for the rooms
+            double flooringNeeded = floorArea / tileArea;
+            double circleFlooring = circleArea/ tileArea;
 
-            // Calculating the total price 
-            var total = floorArea / tileArea * pricePerUnit;
+            // Calculating the total price for the rooms
+            double total = floorArea / tileArea * pricePerUnit;
+            double circleTotal = circleArea / tileArea * pricePerUnit;
 
             Console.WriteLine($"Calculate the labor cost if the average flooring team can only put in {FLOOR_TEAM} square feet of flooring per hour at a cost of {HOUR_PRICE}/hr");
 
             //Calculating hours needed for the rooms 
-            var hoursN = floorArea / FLOOR_TEAM;
+            double hoursN = floorArea / FLOOR_TEAM;
+            double circleHoursN = circleArea/ FLOOR_TEAM;   
 
-            //Calculating total labor cost
-            var laborC = hoursN * HOUR_PRICE;
+            //Calculating total labor cost for the rooms
+            double laborC = hoursN * HOUR_PRICE;
+            double circleLaborC = circleHoursN * HOUR_PRICE;
 
-            if (floorWidth != floorLength) 
-            {
-                Console.WriteLine($"Floor area is: {floorArea}");
-                Console.WriteLine($"Total price is: ${total}");
-                Console.WriteLine($"Total hours needed is: {hoursN}");
-                Console.WriteLine($"Total labor cost is: ${laborC}");
-            } 
-            else if (floorWidth == floorLength)
-            {
-                Console.WriteLine($"Floor area for the square room is: {floorArea}");
-                Console.WriteLine($"Flooring needed for the square room: {flooringNeeded}");
-                Console.WriteLine($"Total price is: ${total}");
-                Console.WriteLine($"Total hours needed for the square room is: {hoursN}");
-                Console.WriteLine($"Total labor cost for the square room is: ${laborC}");
-            }
+            Console.WriteLine($"Tile area is: {tileArea}");
+            Console.WriteLine($"Floor area is {floorArea} for the rectangle room and {circleArea} for the circle shaped room.");
+            Console.WriteLine($"Flooring needed for the room {flooringNeeded} for the rectangle room and {circleFlooring} for the circle shaped room.");
+            Console.WriteLine($"Total price is ${total} for the rectangle room and ${circleTotal} for the circle shaped room.");
+            Console.WriteLine($"Total hours needed is {hoursN} for the rectangle room and {circleHoursN} for the circle shaped room.");
+            Console.WriteLine($"Total labor cost is: ${laborC} for the rectangle room and ${circleLaborC} for the circle shaped room.");
         }
     }
 }
