@@ -11,11 +11,7 @@
             Console.WriteLine("Choose floor shape\n1 - rectangle\n2 - circle ");
             int floorShape = Convert.ToInt32(Console.ReadLine());
 
-            double floorArea = 0;
-            double flooringNeeded = 0;
-            double total = 0;
-            double hoursN = 0;
-            double laborC = 0;
+            double floorArea = 0, flooringNeeded = 0, total = 0, hoursN = 0, laborC = 0;
 
             // Asking for tile dimensions and price
             Console.WriteLine("Insert tile width: ");
